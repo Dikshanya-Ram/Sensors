@@ -11,9 +11,9 @@ B. Temperature
 C. Humidity
 
 References: 
-RpiPico: https://www.circuitstate.com/news/rp2040-pico-all-new-microcontroller-and-development-board-from-raspberry-pi/
-git: https://github.com/sparkfun/SparkFun_SCD4x_Arduino_Library/tree/main
-Datasheet: https://cdn.sparkfun.com/assets/d/4/9/a/d/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf
-SCD40: https://www.sparkfun.com/products/22395
+RpiPico: https://www.circuitstate.com/news/rp2040-pico-all-new-microcontroller-and-development-board-from-raspberry-pi/ <br>
+git: https://github.com/sparkfun/SparkFun_SCD4x_Arduino_Library/tree/main <br>
+Datasheet: https://cdn.sparkfun.com/assets/d/4/9/a/d/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf <br>
+SCD40: https://www.sparkfun.com/products/22395 <br>
 
-Sensor Diagram: https://cdn.sparkfun.com/assets/9/b/f/5/2/SparkFun_Qwiic_CO2_Sensor_SCD40.pdf
+Sensor Diagram: https://cdn.sparkfun.com/assets/9/b/f/5/2/SparkFun_Qwiic_CO2_Sensor_SCD40.pdf <br>
