@@ -29,5 +29,5 @@ RpiPico: https://www.circuitstate.com/news/rp2040-pico-all-new-microcontroller-a
 git: https://github.com/sparkfun/SparkFun_SCD4x_Arduino_Library/tree/main <br>
 Datasheet: https://cdn.sparkfun.com/assets/d/4/9/a/d/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf <br>
 SCD40: https://www.sparkfun.com/products/22395 <br>
-Link to purchase: <a href=https://www.digikey.com/en/products/detail/sparkfun-electronics/SEN-22395/21703931?utm_adgroup=Development%20Boards&utm_source=bing&utm_medium=cpc&utm_campaign=Dynamic%20Search_EN_RLSA_Cart&utm_term=products%20development%20boards%20kits%20programmers%20&utm_content=Development%20Boards&utm_id=bi_cmp-384476623_adg-1311717597280063_ad-81982399195108_dat-2333782149503789:loc-190_dev-c_ext-_prd-&msclkid=9d8c381431a715bd3e875f0aa96a73a0> Here </a>
 Sensor Diagram: https://cdn.sparkfun.com/assets/9/b/f/5/2/SparkFun_Qwiic_CO2_Sensor_SCD40.pdf <br>
+[Link to purchase](https://www.digikey.com/en/products/detail/sparkfun-electronics/SEN-22395/21703931?utm_adgroup=Development%20Boards&utm_source=bing&utm_medium=cpc&utm_campaign=Dynamic%20Search_EN_RLSA_Cart&utm_term=products%20development%20boards%20kits%20programmers%20&utm_content=Development%20Boards&utm_id=bi_cmp-384476623_adg-1311717597280063_ad-81982399195108_dat-2333782149503789:loc-190_dev-c_ext-_prd-&msclkid=9d8c381431a715bd3e875f0aa96a73a0) <br>
