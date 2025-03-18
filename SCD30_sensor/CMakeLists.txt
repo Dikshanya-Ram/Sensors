@@ -34,19 +34,13 @@ project(SCD30_sensor C CXX ASM)
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
+add_executable(SCD30_sensor)
 
-add_executable(SCD30_sensor
-    SCD30_sensor.c
-    )
+#must match executable
+target_sources(SCD30_sensor PRIVATE SCD30_sensor.c)
 
 # pull in common dependencies
-target_link_libraries(SCD30_sensor pico_stdlib)
+target_link_libraries(SCD30_sensor pico_stdlib hardware_i2c)
 
-if (PICO_CYW43_SUPPORTED)
-    target_link_libraries(SCD30_sensor)
-endif()
-
-# create map
+# create map/bin/hex file etc
 pico_add_extra_outputs(SCD30_sensor)
-
-# add url via pico_set_program_url

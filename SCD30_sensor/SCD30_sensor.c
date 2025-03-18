@@ -9,6 +9,8 @@
  */
 
 #include "pico/stdlib.h"
+#include "hardware/i2c.h"
+#include "SCD30_sensor.h"
 
 int main() {
 
