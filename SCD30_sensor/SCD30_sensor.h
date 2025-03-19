@@ -4,11 +4,25 @@
  *
  */
 
- #define ADDRESS 0x68
- #define I2C_CHAN i2c0
- #define SDA_PIN  8
- #define SCL_PIN  9
- #define I2C_BAUD_RATE 400000
+ #define ADDRESS 0x61 // verified with datasheet
+ #define I2C_BAUD_RATE 50000 // Max - 100KHz : advised below 50KHz
+ /*
+ * https://sensirion.com/media/documents/4EAF6AF8/61652C3C/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf
+ */
+ /*
+ * VDD (Sensor) ---- PIN 36 (Vout - 3v3)
+ * GND (any gnd) --- PIN 18
+ *  
+ * SDA (Sensor) --- PIN 11 (GPIO 8) I2C0 SDA
+ * SCL (Sensor) --- PIN 12 (GPIO 9) I2C0 SCL
+ * 
+ */
+ #define I2C_CHAN i2c0 // set to i2c0
+ #define DATA_RDY 7 // Pin 10 - GPIO 7
+ #define SDA_PIN  8 // Pin 11 - GPIO 8
+ #define SCL_PIN  9 // Pin 12 - GPIO 9
+
+
  
  // Fixed point data type
  typedef signed int fix15 ;
@@ -18,6 +32,7 @@
  #define int2fix15(a) ((a)<<16)
  #define fix2int15(a) ((a)>>16)
  #define divfix(a,b) ((fix15)(((( signed long long)(a) << 16 / (b)))))
+ 
  // Parameter values
  #define oneeightyoverpi 3754936
  #define zeropt001 65
