@@ -43,5 +43,5 @@
  #define zeropt9 58982
  
  // VGA primitives - usable in main
- void SCD30_reset(void) ;
+ void SCD30_reset(void);
  void SCD30_read_raw(fix15 val) ;
