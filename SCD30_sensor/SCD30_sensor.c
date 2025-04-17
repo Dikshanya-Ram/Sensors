@@ -33,6 +33,12 @@
      i2c_write_blocking(I2C_PORT, SCD30_ADDR, buf, 4, false);
  }
 
+ void SCD30_set_auto_self_calibration(){
+    //b'\x53\x06\x00\x01\x00';
+    uint8_t buf[] = {0x53, 0x06, 0x00, 0x01};
+    i2c_write_blocking(I2C_PORT, SCD30_ADDR, buf, 4, false);
+ }
+
  bool SCD30_data_ready() {
      uint8_t buf[] = {0x03, 0x00};
      uint8_t data[2];
@@ -84,7 +90,9 @@
      return 0;
  }
  
- 
+ uint8_t cmd_read[] = {0x03, 0x00}; // Command to read measurement
+
+
  int main() {
      stdio_init_all();
  
@@ -112,18 +120,20 @@
      SCD30_set_measurement_interval();
      sleep_ms(100);
  
+     printf("Calibrating...\n");
+     SCD30_set_auto_self_calibration();
+     sleep_ms(100);
+
      float co2, temperature, humidity;
  
      while (1) {
          if (gpio_get(RDY_PIN)) {
-             if (SCD30_read_measurement(&co2, &temperature, &humidity) == 0) {
-                 printf("\nSCD30 Readings:\n");
-                 printf("CO2: %6.2f ppm\n", co2);
-                 printf("Temperature: %6.2f °C\n", temperature);
-                 printf("Humidity: %6.2f %RH\n", humidity);
-             } else {
-                 printf("Failed to read SCD30 measurement!\n");
-             }
+            uint8_t buffer[18]; // 18 bytes of data
+            i2c_write_blocking(I2C_PORT, SCD30_ADDR, cmd_read, 2, true);
+            sleep_ms(3); // suggested in data sheet
+            int bytes_read = i2c_read_burst_blocking(I2C_PORT, SCD30_ADDR, buffer, 18); // read_blocking
+            for(int i=0;i<18;i++)
+                printf("\nbuffer[%d]:%x", i, buffer[i]);
          } else {
              printf("Data not ready yet...\n");
          }

@@ -15,8 +15,8 @@
   // Configuration
   #define I2C_PORT i2c0 // set to i2c0
   #define RDY_PIN 7 // Pin 10 - GPIO 7
-  #define SDA_PIN  8 // Pin 11 - GPIO 8
-  #define SCL_PIN  9 // Pin 12 - GPIO 9
+  #define SDA_PIN  12 // Pin 16 - GPIO 12
+  #define SCL_PIN  13 // Pin 17 - GPIO 13
   
   #define I2C_BAUD_RATE 100000 // Max - 100KHz : advised below 50KHz
   #define SCD30_ADDR 0x61  // Sensor address (7-bit, shifted left 1 bit in i2c functions) // verified with datasheet
